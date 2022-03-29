@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Crypto App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="access">Acessar</string>
+    <string name="sign_up">Criar conta</string>
+    <string name="sign_up_now">Criar nova conta</string>
+    <string name="welcome">Bem vindo ao app crypto</string>
+    <string name="onboarding_login">Acompanhe suas moedas favoritas</string>
+    <string name="password">Senha</string>
+    <string name="login">Login</string>
+    <string name="cpf">CPF</string>
+    <string name="confirm_password">Confirmar senha</string>
+    <string name="view">Visualizar:</string>
+    <string name="all">todos</string>
+    <string name="only_favorites">apenas favoritos</string>
+</resources>
