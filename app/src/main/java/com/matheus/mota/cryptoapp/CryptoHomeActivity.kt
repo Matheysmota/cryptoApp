@@ -1,6 +1,9 @@
 package com.matheus.mota.cryptoapp
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import com.matheus.mota.cryptoapp.CryptoCoins.CryptoCoinsAdapter.CryptoCoin
 import com.matheus.mota.cryptoapp.CryptoCoins.CryptoCoinsAdapter.CryptoCoinAdapter
 import com.matheus.mota.cryptoapp.CryptoCoins.hidenData.CryptoCoinsList
@@ -15,6 +18,7 @@ class CryptoHomeActivity : CryptoCoinsList() {
         setContentView(binding.root)
         //implementations
         initRecyclerView()
+        initOptionMenu()
     }
 
     private fun initRecyclerView(){
@@ -23,10 +27,18 @@ class CryptoHomeActivity : CryptoCoinsList() {
         val cryptoList: MutableList<CryptoCoin> = mutableListOf()
 
         //create cryptoCoins
-
         cryptoList.addAll(cryptoCoinsCollection)
 
         val cryptoAdapter = CryptoCoinAdapter(this, cryptoList)
         reclyclerCryptoCoins.adapter = cryptoAdapter
+    }
+    private fun initOptionMenu(){
+        with(binding.tollBar){
+            this.inflateMenu(R.menu.crypto_menu)
+            menu.findItem(R.id.action_exit).setOnMenuItemClickListener {
+                Toast.makeText(this@CryptoHomeActivity, "testeeeeee", Toast.LENGTH_SHORT).show()
+                true
+            }
+        }
     }
 }

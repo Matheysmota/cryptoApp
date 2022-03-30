@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        app:chipBackgroundColor="@color/button_color"
+        app:chipSpacing="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/firstChip"
+            android:layout_width="92dp"
+            android:layout_height="50dp"
+            app:chipBackgroundColor="@color/chips_color"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_medium"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/secondChip"
+            android:layout_width="92dp"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_medium"
+            app:chipBackgroundColor="@color/chips_color" />
+    </com.google.android.material.chip.ChipGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

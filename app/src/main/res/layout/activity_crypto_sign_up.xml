@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity"
+    tools:context=".CryptoSignUpActivity"
     android:background="@color/background_color">
 
     <com.matheus.mota.cryptoapp.customView.AccessButton
-        android:id="@+id/accessButton"
+        android:id="@+id/createAccountAccessButton"
         android:layout_width="293dp"
         android:layout_height="44dp"
+        android:clickable="true"
+        android:focusable="true"
         app:button_text="@string/sign_up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintVertical_bias="0.30"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <com.matheus.mota.cryptoapp.customView.AccessEditText
@@ -67,7 +69,7 @@
         app:change_hint="@string/confirm_password"
         app:inputType="textPassword"
         app:is_password="true"
-        app:layout_constraintBottom_toTopOf="@+id/accessButton"
+        app:layout_constraintBottom_toTopOf="@+id/createAccountAccessButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/passwordSignInEditText" />

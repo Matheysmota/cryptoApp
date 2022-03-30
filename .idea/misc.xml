@@ -11,24 +11,35 @@
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/drawable/custom_input.xml" value="0.18" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/drawable/custom_input_background.xml" value="0.2175" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/drawable/favorite_drawable.xml" value="0.267" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.21" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.267" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.267" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/drawable/ic_baseline_visibility_24.xml" value="0.2175" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2635" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/drawable/is_favorite.xml" value="0.277" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/drawable/is_not_favorite.xml" value="0.277" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/drawable/line_1.xml" value="0.21" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/drawable/menubar.xml" value="0.21" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/access_button.xml" value="0.22" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/access_crypto_chips.xml" value="0.5" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/access_crypto_coins.xml" value="0.25" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/access_crypto_teams.xml" value="0.33" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/access_edit_text.xml" value="0.5" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_crypto.xml" value="0.33" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_crypto_coin_info.xml" value="0.33" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_crypto_home.xml" value="0.33" />
-        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_crypto_login.xml" value="0.33" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_crypto_login.xml" value="0.25" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_crypto_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/chips_form.xml" value="0.5" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/chips_list.xml" value="0.3489583333333333" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/coins_list.xml" value="0.3435897435897436" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/crypto_coins.xml" value="0.5" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/custom_input.xml" value="0.33" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/fragment_login.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/menubar.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/menu/crypto_menu.xml" value="0.5" />
       </map>
     </option>
   </component>

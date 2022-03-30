@@ -10,18 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CryptoApp">
         <activity
-            android:name=".SignUpActivity"
-            android:exported="false"
-            />
+            android:name=".CryptoCoinInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CryptoSignUpActivity"
+            android:exported="false" />
         <activity
             android:name=".CryptoHomeActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".CryptoLoginActivity"
-            android:theme="@style/Theme.LoginCryptoApp"
-            android:exported="true">
-             <intent-filter>
+            android:exported="true"
+            android:theme="@style/Theme.LoginCryptoApp">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

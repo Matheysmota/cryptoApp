@@ -14,18 +14,20 @@ class CryptoLoginActivity : AppCompatActivity() {
         setContentView(view)
         supportActionBar?.hide()
 
-        startNextActivity()
+        startHomeActivity()
     }
 
-    private fun startNextActivity(){
+    private fun startHomeActivity(){
         binding.run{
             loginAccessButton.setOnClickListener{
-                val intent = Intent(this@CryptoLoginActivity, CryptoHomeActivity::class.java)
+                val intent = Intent(this@CryptoLoginActivity, CryptoCoinInfoActivity::class.java)
                 startActivity(intent)
+                finish()
                 }
             signUpButton.setOnClickListener{
-                val intent = Intent(this@CryptoLoginActivity, SignUpActivity::class.java)
+                val intent = Intent(this@CryptoLoginActivity, CryptoSignUpActivity::class.java)
                 startActivity(intent)
+
                 }
             }
         }
