@@ -1,11 +1,11 @@
-package com.matheus.mota.cryptoapp.CryptoCoins
+package com.matheus.mota.cryptoapp.CryptoCoins.CryptoChipsAdapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.matheus.mota.cryptoapp.AccessCryptoChips
+import com.matheus.mota.cryptoapp.CryptoCoins.AccessCryptoChips
 import com.matheus.mota.cryptoapp.R
 
 class CryptoChipsAdapter(private val context: Context, private val cryptoChips: MutableList<CryptoChips>): RecyclerView.Adapter<CryptoChipsAdapter.CryptoChipsViewHolder>() {
@@ -19,10 +19,11 @@ class CryptoChipsAdapter(private val context: Context, private val cryptoChips: 
         val chips = cryptoChips[position]
         holder.chipsList.setFirstCryptoChip(chips.firstCryptoChips)
         holder.chipsList.setSecondCryptoChip(chips.secondCryptoChips)
-
+        holder.chipsList.setThirdCryptoChip(chips.thirdCryptoChips)
+        holder.chipsList.setFourthCryptoChip(chips.fourthCryptoChips)
+        holder.chipsList.setFifthCryptoChip(chips.fifthCryptoChips)
     }
     override fun getItemCount(): Int = cryptoChips.size
-
 
     inner class CryptoChipsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val chipsList = itemView.findViewById<AccessCryptoChips>(R.id.listAccessCryptoChips)

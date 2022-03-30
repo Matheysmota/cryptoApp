@@ -1,11 +1,10 @@
-package com.matheus.mota.cryptoapp
+package com.matheus.mota.cryptoapp.CryptoCoins
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.matheus.mota.cryptoapp.databinding.AccessCryptoChipsBinding
-import com.matheus.mota.cryptoapp.databinding.AccessCryptoCoinsBinding
 
 class AccessCryptoChips @JvmOverloads constructor(
     context: Context,
@@ -19,8 +18,17 @@ class AccessCryptoChips @JvmOverloads constructor(
     fun setFirstCryptoChip(firstCryptoChip: String){
         binding.firstChip.text = firstCryptoChip
     }
-    fun setSecondCryptoChip(secondCryptoChip: String){
+    fun setSecondCryptoChip(secondCryptoChip: String) {
         binding.secondChip.text = secondCryptoChip
     }
-
+    fun setThirdCryptoChip(thirdCryptoChip: String) {
+        binding.thirdChip.text = thirdCryptoChip
+    }
+    fun setFourthCryptoChip(fourthCryptoChip: String) {
+        binding.fourthChip.text = fourthCryptoChip
+    }
+    fun setFifthCryptoChip(fifthCryptoChip: String) {
+        binding.fifthChip.text = fifthCryptoChip
+    }
 }
+

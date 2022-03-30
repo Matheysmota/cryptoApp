@@ -42,7 +42,7 @@ class AccessCryptoCoins @JvmOverloads constructor(
     fun setRankingCoin(cryptoRanking: String){
         binding.cryptoCountTextView.text = cryptoRanking
     }
-    sealed class CryptoCoinsState(val favorite: Boolean){
+    sealed class CryptoCoinsState(val favorite: Boolean) {
         object isNotFavorite : CryptoCoinsState(true) // will be default -> favorite_border_24
         object isFavorite : CryptoCoinsState(false) // will be filled -> favorite_24
     }
