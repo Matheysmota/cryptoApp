@@ -6,12 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    tools:context=".CryptoCoinInfoActivity">
+    tools:context=".cryptoInfo.CryptoCoinInfoActivity">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-
-        >
+        android:layout_height="0dp">
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/tollBar"
             android:layout_width="match_parent"
@@ -22,8 +20,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
             app:titleTextColor="@color/white"
-            tools:title="Bitcoin"
-            />
+            tools:title="Bitcoin" />
         <TextView
             android:id="@+id/descriptionTextView"
             android:layout_width="wrap_content"
@@ -39,9 +36,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tollBar"
-            app:layout_constraintVertical_chainStyle="packed"
-            />
-
+            app:layout_constraintVertical_chainStyle="packed" />
         <HorizontalScrollView
             android:id="@+id/horizontalView"
             android:layout_width="wrap_content"
@@ -49,7 +44,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/descriptionTextView">
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/chipsRecyclerView"
                 android:layout_width="0dp"
@@ -64,7 +58,6 @@
                 tools:itemCount="1"
                 tools:listitem="@layout/access_crypto_chips" />
         </HorizontalScrollView>
-
         <androidx.recyclerview.widget.RecyclerView
             android:layout_marginTop="6dp"
             android:id="@+id/teamsRecyclerView"
@@ -76,10 +69,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/horizontalView"
             tools:itemCount="4"
-            tools:listitem="@layout/access_crypto_teams"
-            />
-
+            tools:listitem="@layout/access_crypto_teams" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </ScrollView>

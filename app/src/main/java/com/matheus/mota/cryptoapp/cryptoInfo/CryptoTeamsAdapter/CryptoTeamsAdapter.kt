@@ -1,11 +1,11 @@
-package com.matheus.mota.cryptoapp.CryptoCoins.CryptoTeamsAdapter
+package com.matheus.mota.cryptoapp.cryptoInfo.CryptoTeamsAdapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.matheus.mota.cryptoapp.CryptoCoins.AccessCryptoTeams
+import com.matheus.mota.cryptoapp.cryptoInfo.AccessCryptoTeams
 import com.matheus.mota.cryptoapp.R
 
 class CryptoTeamsAdapter(private val context: Context, private val cryptoTeams: MutableList<CryptoTeams>): RecyclerView.Adapter<CryptoTeamsAdapter.CryptoTeamsViewHolder>() {

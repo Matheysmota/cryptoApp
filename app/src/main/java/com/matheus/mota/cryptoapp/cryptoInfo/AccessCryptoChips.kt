@@ -1,4 +1,4 @@
-package com.matheus.mota.cryptoapp.CryptoCoins
+package com.matheus.mota.cryptoapp.cryptoInfo
 
 import android.content.Context
 import android.util.AttributeSet

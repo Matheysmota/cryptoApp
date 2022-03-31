@@ -1,11 +1,11 @@
-package com.matheus.mota.cryptoapp.CryptoCoins.CryptoChipsAdapter
+package com.matheus.mota.cryptoapp.cryptoInfo.CryptoChipsAdapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.matheus.mota.cryptoapp.CryptoCoins.AccessCryptoChips
+import com.matheus.mota.cryptoapp.cryptoInfo.AccessCryptoChips
 import com.matheus.mota.cryptoapp.R
 
 class CryptoChipsAdapter(private val context: Context, private val cryptoChips: MutableList<CryptoChips>): RecyclerView.Adapter<CryptoChipsAdapter.CryptoChipsViewHolder>() {

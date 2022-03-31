@@ -7,7 +7,7 @@
     tools:context=".CryptoLoginActivity"
     android:background="@color/background_color"
     >
-    <com.matheus.mota.cryptoapp.customView.AccessEditText
+    <com.matheus.mota.cryptoapp.utils.customView.AccessEditText
         android:id="@+id/accessPasswordEditText"
         android:layout_width="293dp"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toBottomOf="@+id/accessLoginEditText"
         app:inputType="textPassword"
         />
-    <com.matheus.mota.cryptoapp.customView.AccessEditText
+    <com.matheus.mota.cryptoapp.utils.customView.AccessEditText
         android:id="@+id/accessLoginEditText"
         android:layout_width="293dp"
         android:layout_height="44dp"
@@ -34,7 +34,7 @@
         app:inputType="text"
         />
 
-    <com.matheus.mota.cryptoapp.customView.AccessButton
+    <com.matheus.mota.cryptoapp.utils.customView.AccessButton
         android:id="@+id/loginAccessButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

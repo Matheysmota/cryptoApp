@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.matheus.mota.cryptoapp.CryptoCoins.AccessCryptoCoins
+    <com.matheus.mota.cryptoapp.cryptoHome.AccessCryptoCoins
         android:id="@+id/listAccessCryptoCoin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

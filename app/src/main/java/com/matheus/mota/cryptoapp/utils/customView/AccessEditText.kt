@@ -1,10 +1,9 @@
-package com.matheus.mota.cryptoapp.customView
+package com.matheus.mota.cryptoapp.utils.customView
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.google.android.material.textfield.TextInputLayout
 import com.matheus.mota.cryptoapp.R
 import com.matheus.mota.cryptoapp.databinding.AccessEditTextBinding
 

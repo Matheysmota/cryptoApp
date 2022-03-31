@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CryptoApp">
         <activity
-            android:name=".CryptoCoinInfoActivity"
+            android:name=".cryptoInfo.CryptoCoinInfoActivity"
             android:exported="false" />
         <activity
             android:name=".CryptoSignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".CryptoHomeActivity"
+            android:name=".cryptoHome.CryptoHomeActivity"
             android:exported="false" />
         <activity
             android:name=".CryptoLoginActivity"

@@ -1,15 +1,16 @@
-package com.matheus.mota.cryptoapp
+package com.matheus.mota.cryptoapp.cryptoHome
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.widget.Toast
-import com.matheus.mota.cryptoapp.CryptoCoins.CryptoCoinsAdapter.CryptoCoin
-import com.matheus.mota.cryptoapp.CryptoCoins.CryptoCoinsAdapter.CryptoCoinAdapter
-import com.matheus.mota.cryptoapp.CryptoCoins.hidenData.CryptoCoinsList
+import androidx.appcompat.app.AppCompatActivity
+import com.matheus.mota.cryptoapp.cryptoHome.CryptoCoinsAdapter.CryptoCoin
+import com.matheus.mota.cryptoapp.cryptoHome.CryptoCoinsAdapter.CryptoCoinAdapter
+import com.matheus.mota.cryptoapp.R
 import com.matheus.mota.cryptoapp.databinding.ActivityCryptoHomeBinding
+import com.matheus.mota.cryptoapp.utils.cryptoCoinsCollection
 
-class CryptoHomeActivity : CryptoCoinsList() {
+
+class CryptoHomeActivity : AppCompatActivity() {
     lateinit var binding: ActivityCryptoHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,15 +23,10 @@ class CryptoHomeActivity : CryptoCoinsList() {
     }
 
     private fun initRecyclerView(){
-
-        val reclyclerCryptoCoins = binding.buttonRecyclerView
-        val cryptoList: MutableList<CryptoCoin> = mutableListOf()
-
         //create cryptoCoins
+        val cryptoList: MutableList<CryptoCoin> = mutableListOf()
         cryptoList.addAll(cryptoCoinsCollection)
-
-        val cryptoAdapter = CryptoCoinAdapter(this, cryptoList)
-        reclyclerCryptoCoins.adapter = cryptoAdapter
+        setUpRecyclerView(binding, cryptoList)
     }
     private fun initOptionMenu(){
         with(binding.tollBar){

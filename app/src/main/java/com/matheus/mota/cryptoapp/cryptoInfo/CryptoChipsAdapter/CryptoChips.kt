@@ -1,4 +1,4 @@
-package com.matheus.mota.cryptoapp.CryptoCoins.CryptoChipsAdapter
+package com.matheus.mota.cryptoapp.cryptoInfo.CryptoChipsAdapter
 
 data class CryptoChips(
     val firstCryptoChips: String,

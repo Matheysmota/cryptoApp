@@ -1,12 +1,10 @@
-package com.matheus.mota.cryptoapp.CryptoCoins.CryptoCoinsAdapter
+package com.matheus.mota.cryptoapp.cryptoHome.CryptoCoinsAdapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.AppCompatImageView
-import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
-import com.matheus.mota.cryptoapp.CryptoCoins.AccessCryptoCoins
+import com.matheus.mota.cryptoapp.cryptoHome.AccessCryptoCoins
 import com.matheus.mota.cryptoapp.R
 
 class CryptoCoinAdapter(private val context: Context, private val cryptoCoins: MutableList<CryptoCoin>): RecyclerView.Adapter<CryptoCoinAdapter.CryptoCoinViewHolder>() {
@@ -30,6 +28,6 @@ class CryptoCoinAdapter(private val context: Context, private val cryptoCoins: M
 
 
     inner class CryptoCoinViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val coinsList = itemView.findViewById<AccessCryptoCoins>(R.id.listAccessCryptoCoin)
+        val coinsList: AccessCryptoCoins = itemView.findViewById<AccessCryptoCoins>(R.id.listAccessCryptoCoin)
     }
 }

@@ -1,4 +1,4 @@
-package com.matheus.mota.cryptoapp.customView
+package com.matheus.mota.cryptoapp.utils.customView
 
 import android.content.Context
 import android.util.AttributeSet

@@ -3,6 +3,7 @@ package com.matheus.mota.cryptoapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.matheus.mota.cryptoapp.cryptoInfo.CryptoCoinInfoActivity
 import com.matheus.mota.cryptoapp.databinding.ActivityCryptoLoginBinding
 
 class CryptoLoginActivity : AppCompatActivity() {

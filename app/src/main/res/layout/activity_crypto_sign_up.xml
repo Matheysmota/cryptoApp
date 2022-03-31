@@ -7,7 +7,7 @@
     tools:context=".CryptoSignUpActivity"
     android:background="@color/background_color">
 
-    <com.matheus.mota.cryptoapp.customView.AccessButton
+    <com.matheus.mota.cryptoapp.utils.customView.AccessButton
         android:id="@+id/createAccountAccessButton"
         android:layout_width="293dp"
         android:layout_height="44dp"
@@ -21,7 +21,7 @@
         android:layout_marginTop="40dp"
         />
 
-    <com.matheus.mota.cryptoapp.customView.AccessEditText
+    <com.matheus.mota.cryptoapp.utils.customView.AccessEditText
         android:id="@+id/loginSignInEditText"
         android:layout_width="293dp"
         android:layout_height="44dp"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.30"
         app:layout_constraintVertical_chainStyle="packed" />
 
-    <com.matheus.mota.cryptoapp.customView.AccessEditText
+    <com.matheus.mota.cryptoapp.utils.customView.AccessEditText
         android:id="@+id/cpfSignInEditText"
         android:layout_width="293dp"
         android:layout_height="44dp"
@@ -48,7 +48,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginSignInEditText" />
 
-    <com.matheus.mota.cryptoapp.customView.AccessEditText
+    <com.matheus.mota.cryptoapp.utils.customView.AccessEditText
         android:id="@+id/passwordSignInEditText"
         android:layout_width="293dp"
         android:layout_height="44dp"
@@ -61,7 +61,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cpfSignInEditText" />
 
-    <com.matheus.mota.cryptoapp.customView.AccessEditText
+    <com.matheus.mota.cryptoapp.utils.customView.AccessEditText
         android:id="@+id/confirmPwdSignInEditText"
         android:layout_width="293dp"
         android:layout_height="44dp"
