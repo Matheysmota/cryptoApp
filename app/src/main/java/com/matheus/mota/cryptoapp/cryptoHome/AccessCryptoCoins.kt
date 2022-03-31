@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.matheus.mota.cryptoapp.R
 import com.matheus.mota.cryptoapp.databinding.AccessCryptoCoinsBinding
 
 
@@ -15,25 +16,21 @@ class AccessCryptoCoins @JvmOverloads constructor(
     private val binding = AccessCryptoCoinsBinding
         .inflate(LayoutInflater.from(context), this, true)
     //variable responsible for receiving and invoking states
-    private var state: CryptoCoinsState = CryptoCoinsState.IsNotFavorite
+//    private var state: CryptoCoinsState = CryptoCoinsState.IsNotFavorite
+    var listener: AccessCryptoCoinClicklListener? = null
 
     init {
-        refreshState()
-    }
-
-    private fun refreshState() {
-        binding.favoriteIconImageView.isEnabled = state.favorite
-        refreshDrawableState()
+        binding.favoriteIconImageView.setOnClickListener{
+            listener?.setClickListener()
+        }
     }
 
     // Has the responsibility of programmatically set the State
     fun setIsFavorite(){
-        state = CryptoCoinsState.IsFavorite
-        refreshState()
+        binding.favoriteIconImageView.setBackgroundResource(R.drawable.is_favorite)
     }
     fun setIsNotFavorite() {
-        state = CryptoCoinsState.IsNotFavorite
-        refreshState()
+        binding.favoriteIconImageView.setBackgroundResource(R.drawable.is_not_favorite)
     }
 
     fun setCoinsName(cryptoName: String){
@@ -42,9 +39,13 @@ class AccessCryptoCoins @JvmOverloads constructor(
     fun setRankingCoin(cryptoRanking: String){
         binding.cryptoCountTextView.text = cryptoRanking
     }
-    sealed class CryptoCoinsState(val favorite: Boolean) {
-        object IsNotFavorite : CryptoCoinsState(true) // will be default -> favorite_border_24
-        object IsFavorite : CryptoCoinsState(false) // will be filled -> favorite_24
-    }
+//    sealed class CryptoCoinsState(val favorite: Boolean) {
+//        object IsNotFavorite : CryptoCoinsState(true) // will be default -> favorite_border_24
+//        object IsFavorite : CryptoCoinsState(false) // will be filled -> favorite_24
+//    }
 
+}
+
+interface AccessCryptoCoinClicklListener{
+    fun setClickListener()
 }

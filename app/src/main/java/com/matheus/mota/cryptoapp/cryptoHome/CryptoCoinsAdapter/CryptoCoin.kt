@@ -1,9 +1,12 @@
 package com.matheus.mota.cryptoapp.cryptoHome.CryptoCoinsAdapter
 
+import java.io.Serializable
+
+
 data class CryptoCoin(
     val cryptoName: String,
     val ranking: String,
-    val favorite: Boolean
-) {
+    var favorite: Boolean
+): Serializable {
 
 }

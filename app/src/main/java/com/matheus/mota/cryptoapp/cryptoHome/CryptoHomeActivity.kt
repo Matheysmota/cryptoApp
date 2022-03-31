@@ -1,6 +1,7 @@
 package com.matheus.mota.cryptoapp.cryptoHome
 
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.matheus.mota.cryptoapp.cryptoHome.CryptoCoinsAdapter.CryptoCoin
@@ -30,7 +31,7 @@ class CryptoHomeActivity : AppCompatActivity() {
     }
     private fun initOptionMenu(){
         with(binding.tollBar){
-            this.inflateMenu(R.menu.crypto_menu)
+            inflateMenu(R.menu.crypto_menu)
             menu.findItem(R.id.action_exit).setOnMenuItemClickListener {
                 Toast.makeText(this@CryptoHomeActivity, "testeeeeee", Toast.LENGTH_SHORT).show()
                 true

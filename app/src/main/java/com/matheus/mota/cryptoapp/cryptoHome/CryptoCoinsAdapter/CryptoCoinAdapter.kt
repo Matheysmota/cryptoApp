@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.matheus.mota.cryptoapp.cryptoHome.AccessCryptoCoins
 import com.matheus.mota.cryptoapp.R
+import com.matheus.mota.cryptoapp.cryptoHome.AccessCryptoCoinClicklListener
 
 class CryptoCoinAdapter(private val context: Context, private val cryptoCoins: MutableList<CryptoCoin>): RecyclerView.Adapter<CryptoCoinAdapter.CryptoCoinViewHolder>() {
 
@@ -23,11 +24,20 @@ class CryptoCoinAdapter(private val context: Context, private val cryptoCoins: M
         } else {
             holder.coinsList.setIsNotFavorite()
         }
-    }
-    override fun getItemCount(): Int = cryptoCoins.size
+        holder.coinsList.listener = object: AccessCryptoCoinClicklListener {
+            override fun setClickListener() {
+                coins.favorite = !coins.favorite
 
+                notifyItemChanged(position)
+            }
+        }
+    }
+
+    override fun getItemCount(): Int = cryptoCoins.size
 
     inner class CryptoCoinViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val coinsList: AccessCryptoCoins = itemView.findViewById<AccessCryptoCoins>(R.id.listAccessCryptoCoin)
     }
+
+
 }
