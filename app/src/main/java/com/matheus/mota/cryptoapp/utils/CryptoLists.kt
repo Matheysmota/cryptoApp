@@ -13,12 +13,12 @@ val cryptoCoinsCollection: Collection<CryptoCoin> = (
             CryptoCoin("(XRP) XRP","#5", false),
             CryptoCoin("(LUNA) Terra","#6", false),
             CryptoCoin("(AVAX) Avalanche","#7", false),
-            CryptoCoin("(AVAX) Avalanche","#7", false),
-            CryptoCoin("(AVAX) Avalanche","#7", false),
-            CryptoCoin("(AVAX) Avalanche","#7", false),
-            CryptoCoin("(AVAX) Avalanche","#7", false),
-            CryptoCoin("(AVAX) Avalanche","#7", false),
-            CryptoCoin("(AVAX) Avalanche","#7", false)
+            CryptoCoin("cryptoCoin8","#8", false),
+            CryptoCoin("cryptoCoin9","#9", false),
+            CryptoCoin("cryptoCoin10","#10", false),
+            CryptoCoin("cryptoCoin11","#11", false),
+            CryptoCoin("cryptoCoin12","#12", false),
+            CryptoCoin("cryptoCoin13","#13", false)
         )
         )
 
@@ -38,3 +38,22 @@ val cryptoTeamsCollection: Collection<CryptoTeams> = (
             CryptoTeams("Satoshi Nakamoto", "Founder", null)
         )
         )
+
+enum class myCoin{
+    BTC,
+    ETH,
+    SOL,
+    BND,
+    XRP,
+    LUNA,
+    AVAX,
+    CRYPTO_8,
+    CRYPTO_9,
+    CRYPTO_10,
+    CRYPTO_11,
+    CRYPTO_12,
+    CRYPTO_13
+}
+
+
+

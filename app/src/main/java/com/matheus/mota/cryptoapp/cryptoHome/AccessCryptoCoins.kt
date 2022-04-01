@@ -5,10 +5,11 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.matheus.mota.cryptoapp.R
+import com.matheus.mota.cryptoapp.cryptoHome.CryptoCoinsAdapter.CryptoCoin
 import com.matheus.mota.cryptoapp.databinding.AccessCryptoCoinsBinding
 
 
-class AccessCryptoCoins @JvmOverloads constructor(
+open class AccessCryptoCoins @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet?,
     defStyleAttrs: Int = 0
@@ -20,9 +21,7 @@ class AccessCryptoCoins @JvmOverloads constructor(
     var listener: AccessCryptoCoinClicklListener? = null
 
     init {
-        binding.favoriteIconImageView.setOnClickListener{
-            listener?.setClickListener()
-        }
+        clickCardViewListener()
     }
 
     // Has the responsibility of programmatically set the State
@@ -32,7 +31,15 @@ class AccessCryptoCoins @JvmOverloads constructor(
     fun setIsNotFavorite() {
         binding.favoriteIconImageView.setBackgroundResource(R.drawable.is_not_favorite)
     }
-
+    //binding card View elements
+    fun clickCardViewListener(){
+        binding.favoriteIconImageView.setOnClickListener{
+            listener?.setFavoriteState()
+        }
+        binding.cryptoButton.setOnClickListener{
+            listener?.setCardViewImplementation()
+        }
+    }
     fun setCoinsName(cryptoName: String){
         binding.cryptoCoinTextView.text = cryptoName
     }
@@ -47,5 +54,6 @@ class AccessCryptoCoins @JvmOverloads constructor(
 }
 
 interface AccessCryptoCoinClicklListener{
-    fun setClickListener()
+    fun setFavoriteState()
+    fun setCardViewImplementation()
 }

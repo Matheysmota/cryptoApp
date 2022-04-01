@@ -1,6 +1,7 @@
 package com.matheus.mota.cryptoapp.utils.customView
 
 import android.content.Context
+import android.text.Editable
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
