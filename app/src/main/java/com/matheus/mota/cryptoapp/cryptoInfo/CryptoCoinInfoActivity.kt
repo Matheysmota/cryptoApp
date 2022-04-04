@@ -8,62 +8,48 @@ import com.matheus.mota.cryptoapp.cryptoInfo.CryptoChipsAdapter.CryptoChipsAdapt
 import com.matheus.mota.cryptoapp.cryptoInfo.CryptoTeamsAdapter.CryptoTeams
 import com.matheus.mota.cryptoapp.cryptoInfo.CryptoTeamsAdapter.CryptoTeamsAdapter
 import com.matheus.mota.cryptoapp.databinding.ActivityCryptoCoinInfoBinding
-import com.matheus.mota.cryptoapp.utils.cryptoChipsCollection
-import com.matheus.mota.cryptoapp.utils.cryptoCoinsCollection
-import com.matheus.mota.cryptoapp.utils.cryptoTeamsCollection
+import com.matheus.mota.cryptoapp.utils.*
+
 
 class CryptoCoinInfoActivity : AppCompatActivity() {
     lateinit var binding: ActivityCryptoCoinInfoBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCryptoCoinInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        initRecyclerView()
-        recuperardados()
-    }
-    private fun initRecyclerView(){
-        setCryptoChipsAdapter()
-        setCryptoTeamsAdapter()
+        val data = intent.extras
+        val coin = data?.getSerializable("coin")
+        initInterface(coin as CryptoCoin)
     }
 
-
-    private fun setCryptoChipsAdapter(){
+    private fun initInterface(coin: CryptoCoin){
+        setCryptoChipsAdapter(coin)
+        setCryptoTeamsAdapter(coin)
+        verification(coin, binding.descriptionTextView)
+    }
+    private fun setCryptoChipsAdapter(coin: CryptoCoin){
         val recyclerCryptoChips = binding.chipsRecyclerView
         val chipsList: MutableList<CryptoChips> = mutableListOf()
 
+
+
         //create cryptoCoins
-        chipsList.addAll(cryptoChipsCollection)
+        setChips(coin).let { chipsList.addAll(it) }
 
         val cryptoAdapter = CryptoChipsAdapter(this, chipsList)
         recyclerCryptoChips.adapter = cryptoAdapter
     }
-    private fun setCryptoTeamsAdapter(){
+    private fun setCryptoTeamsAdapter(coin: CryptoCoin){
         val recyclerCryptoTeams = binding.teamsRecyclerView
         val teamsList: MutableList<CryptoTeams> = mutableListOf()
 
         //create cryptoCoins
-        teamsList.addAll(cryptoTeamsCollection)
+        setTeam(coin).let { teamsList.addAll(it) }
 
         val cryptoAdapter = CryptoTeamsAdapter(this, teamsList)
         recyclerCryptoTeams.adapter = cryptoAdapter
     }
 
-    private fun recuperardados(){
 
-        val data = intent.extras
-        val coin = data?.getSerializable("coin")
-
-        for (cryptoCoin in cryptoCoinsCollection){
-
-            if(cryptoCoin == coin){
-
-                break
-            }
-        }
-
-    }
-
-    private fun implementation() {
-
-    }
 }

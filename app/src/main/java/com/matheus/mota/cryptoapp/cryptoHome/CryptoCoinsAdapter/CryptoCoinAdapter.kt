@@ -43,7 +43,8 @@ open class CryptoCoinAdapter(private val context: Context, private val cryptoCoi
     override fun getItemCount(): Int = cryptoCoins.size
 
     inner class CryptoCoinViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val coinsList: AccessCryptoCoins = itemView.findViewById<AccessCryptoCoins>(R.id.listAccessCryptoCoin)
+        val coinsList: AccessCryptoCoins =
+            itemView.findViewById<AccessCryptoCoins>(R.id.listAccessCryptoCoin)
     }
 
 }

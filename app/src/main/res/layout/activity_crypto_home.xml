@@ -4,47 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".cryptoHome.CryptoHomeActivity"
     android:background="@color/background_color"
-    >
+    tools:context=".cryptoHome.CryptoHomeActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/tollBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/app_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/app_bar"
         app:title="Bem vindo"
-        app:titleTextColor="@color/white"
-        />
+        app:titleTextColor="@color/white" />
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/buttonRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tollBar"
-        android:layout_marginTop="16dp"
         tools:itemCount="15"
         tools:listitem="@layout/access_crypto_coins" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="336dp"
         android:layout_height="44dp"
+        android:layout_marginBottom="44dp"
+        app:cardBackgroundColor="@color/button_color"
+        app:cardCornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:cardCornerRadius="12dp"
-        app:cardBackgroundColor="@color/button_color"
-        android:layout_marginBottom="44dp"
-        >
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/visualizeTextView"
@@ -63,11 +60,11 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto"
             android:layout_marginStart="90dp"
-            android:text="@string/all"
             android:clickable="true"
             android:focusable="true"
+            android:fontFamily="@font/roboto"
+            android:text="@string/all"
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="14sp" />
@@ -75,12 +72,12 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/onlyFavoriteButton"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:clickable="true"
-            android:focusable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto"
             android:layout_marginStart="180dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/roboto"
             android:text="@string/only_favorites"
             android:textAllCaps="true"
             android:textColor="@color/white"
