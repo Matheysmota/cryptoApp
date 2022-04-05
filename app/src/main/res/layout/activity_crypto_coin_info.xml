@@ -30,7 +30,7 @@
             android:layout_centerHorizontal="true"
             android:gravity="top"
             android:lineSpacingExtra="3sp"
-            android:text="@string/headline"
+            android:text="@string/bitcoin_description"
             android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"

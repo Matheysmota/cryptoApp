@@ -21,18 +21,22 @@ class CryptoLoginActivity : AppCompatActivity() {
         startHomeActivity()
     }
 
-    private fun startHomeActivity(){
-        binding.run{
-            loginAccessButton.setOnClickListener{
+    private fun startHomeActivity() {
+        binding.run {
+            loginAccessButton.setOnClickListener {
                 val intent = Intent(this@CryptoLoginActivity, CryptoHomeActivity::class.java)
-                startActivity(intent)
-                finish()
+                if(accessLoginEditText.isValid() && accessPasswordEditText.isValid()){
+                    startActivity(intent)
+                    finish()
+                } else {
+                    Toast.makeText(this@CryptoLoginActivity, "Digite os campos, por favor.", Toast.LENGTH_SHORT).show()
                 }
-            signUpButton.setOnClickListener{
+            }
+            signUpButton.setOnClickListener {
                 val intent = Intent(this@CryptoLoginActivity, CryptoSignUpActivity::class.java)
                 startActivity(intent)
 
-                }
             }
         }
+    }
 }

@@ -29,8 +29,15 @@ class AccessEditText @JvmOverloads constructor(
             this.binding.inputTypeInputLayout.isPasswordVisibilityToggleEnabled = attribute.getBoolean(R.styleable.AccessEditText_is_password, true)
             this.binding.accessHintEditText.hint = attribute.getString(R.styleable.AccessEditText_change_hint)
             this.binding.accessHintEditText.inputType = attribute.getType(R.styleable.AccessEditText_inputType)
-
             attribute.recycle()
         }
+    }
+    fun isValid(): Boolean{
+        return this.binding.accessHintEditText.text.isNotEmpty()
+    }
+
+    // pensar nisso aqui.
+    fun myText(): String{
+        return this.binding.accessHintEditText.text.toString()
     }
 }

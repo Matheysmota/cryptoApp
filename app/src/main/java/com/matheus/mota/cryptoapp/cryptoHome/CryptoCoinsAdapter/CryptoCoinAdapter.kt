@@ -13,6 +13,9 @@ import com.matheus.mota.cryptoapp.cryptoInfo.CryptoCoinInfoActivity
 
 
 open class CryptoCoinAdapter(private val context: Context, private val cryptoCoins: MutableList<CryptoCoin>): RecyclerView.Adapter<CryptoCoinAdapter.CryptoCoinViewHolder>() {
+
+    var notifyMyActivity: CryptoCoinAdapterInterface? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CryptoCoinViewHolder {
         val cryptoView = LayoutInflater.from(context).inflate(R.layout.coins_list, parent, false)
         val holder = CryptoCoinViewHolder(cryptoView)
@@ -28,14 +31,14 @@ open class CryptoCoinAdapter(private val context: Context, private val cryptoCoi
         } else {
             holder.coinsList.setIsNotFavorite()
         }
+        //click implementation
         holder.coinsList.listener = object: AccessCryptoCoinClicklListener {
             override fun setFavoriteState() {
                 coin.favorite = !coin.favorite
                 notifyItemChanged(holder.adapterPosition)
             }
-
             override fun setCardViewImplementation() {
-                startCoinInfo(context, coin)
+                notifyMyActivity?.notifyActivity(coin)
             }
         }
     }
@@ -47,4 +50,7 @@ open class CryptoCoinAdapter(private val context: Context, private val cryptoCoi
             itemView.findViewById<AccessCryptoCoins>(R.id.listAccessCryptoCoin)
     }
 
+}
+interface CryptoCoinAdapterInterface{
+    fun notifyActivity(coin: CryptoCoin)
 }

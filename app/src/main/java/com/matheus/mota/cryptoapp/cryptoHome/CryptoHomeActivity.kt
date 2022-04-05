@@ -1,11 +1,9 @@
 package com.matheus.mota.cryptoapp.cryptoHome
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.matheus.mota.cryptoapp.cryptoHome.CryptoCoinsAdapter.CryptoCoin
-import com.matheus.mota.cryptoapp.cryptoHome.CryptoCoinsAdapter.CryptoCoinAdapter
 import com.matheus.mota.cryptoapp.R
 import com.matheus.mota.cryptoapp.databinding.ActivityCryptoHomeBinding
 import com.matheus.mota.cryptoapp.utils.cryptoCoinsCollection
@@ -13,21 +11,22 @@ import com.matheus.mota.cryptoapp.utils.cryptoCoinsCollection
 
 class CryptoHomeActivity : AppCompatActivity() {
     lateinit var binding: ActivityCryptoHomeBinding
-    private lateinit var teste: CryptoCoinAdapter
-
+    lateinit var myCrypto: CryptoCoin
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCryptoHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         //implementations
-        initRecyclerView()
+        myCryptoCoinsList()?.let { initRecyclerView(it) }
         initOptionMenu()
+        setFavoriteFilter()
+        setAllFilter()
         }
-    private fun initRecyclerView() {
+    private fun initRecyclerView(list: Collection<CryptoCoin>) {
         //create cryptoCoins
         val cryptoList: MutableList<CryptoCoin> = mutableListOf()
-        cryptoList.addAll(cryptoCoinsCollection)
+        cryptoList.addAll(list)
         setUpRecyclerView(binding, cryptoList)
     }
 
@@ -39,9 +38,26 @@ class CryptoHomeActivity : AppCompatActivity() {
                 true
             }
         }
-
     }
 
+    private fun myCryptoCoinsList(): Collection<CryptoCoin>? {
+        if (cryptoCoinsCollection.any { it.favorite }){
+            return cryptoCoinsCollection.filter { it.favorite}
+        } else {
+            return cryptoCoinsCollection
+        }
+    }
+    private fun setFavoriteFilter(){
+        binding.onlyFavoriteButton.setOnClickListener{
+            myCryptoCoinsList()?.let { initRecyclerView(it) }
+            Toast.makeText(this, "Suas cryptoMoedas favoritas", Toast.LENGTH_SHORT).show()
+        }
+    }
+    private fun setAllFilter(){
+        binding.allButton.setOnClickListener{
+         initRecyclerView(cryptoCoinsCollection)
+        }
+    }
 }
 
 

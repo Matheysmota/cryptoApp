@@ -19,8 +19,8 @@ class CryptoCoinInfoActivity : AppCompatActivity() {
         binding = ActivityCryptoCoinInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val data = intent.extras
-        val coin = data?.getSerializable("coin")
-        initInterface(coin as CryptoCoin)
+        val coin = data?.getSerializable("coin") as CryptoCoin
+        initInterface(coin)
     }
 
     private fun initInterface(coin: CryptoCoin){
@@ -31,9 +31,6 @@ class CryptoCoinInfoActivity : AppCompatActivity() {
     private fun setCryptoChipsAdapter(coin: CryptoCoin){
         val recyclerCryptoChips = binding.chipsRecyclerView
         val chipsList: MutableList<CryptoChips> = mutableListOf()
-
-
-
         //create cryptoCoins
         setChips(coin).let { chipsList.addAll(it) }
 

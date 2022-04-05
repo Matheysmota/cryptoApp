@@ -1,11 +1,13 @@
 package com.matheus.mota.cryptoapp.utils
 
 import android.widget.TextView
+import com.matheus.mota.cryptoapp.R
 import com.matheus.mota.cryptoapp.cryptoHome.CryptoCoinsAdapter.CryptoCoin
 import com.matheus.mota.cryptoapp.cryptoInfo.CryptoChipsAdapter.CryptoChips
 import com.matheus.mota.cryptoapp.cryptoInfo.CryptoTeamsAdapter.CryptoTeams
 
-val cryptoCoinsCollection: Collection<CryptoCoin> = (
+//adicionar chips e tags
+val cryptoCoinsCollection: List<CryptoCoin> = (
         listOf(
             CryptoCoin("(BTC) Bitcoin", "#1", false),
             CryptoCoin("(ETH) Etherium", "#2", false),
@@ -23,9 +25,10 @@ val cryptoCoinsCollection: Collection<CryptoCoin> = (
         )
         )
 
-var cryptoChipsCollection: Collection<CryptoChips> = (
-        listOf(
-            CryptoChips("tag1", "tag2", "tag3", "tag4", "tag5")
+var cryptoChipsCollection: List<CryptoChips> = (
+        arrayListOf(
+            CryptoChips("btc1", "btc2", "btc3", "btc4", "btc5"),
+            CryptoChips("ETH1", "ETH2", "ETH3","ETH4", "ETH5"),
         )
         )
 
@@ -58,8 +61,6 @@ fun changeTheDescription(coin: CryptoCoin, description: TextView) {
     }
 }
 
-
-
 fun setTeam(coin: CryptoCoin): Collection<CryptoTeams> {
     var teams = cryptoTeamsCollection
     when (coin.cryptoName) {
@@ -81,14 +82,13 @@ enum class myCoins {
 val descriptionBTC = "descrição btc"
 
 
-fun setChips(coin: CryptoCoin): Collection<CryptoChips> {
+fun setChips(coin: CryptoCoin): List<CryptoChips> {
     var chips = cryptoChipsCollection
+
     when (coin.cryptoName) {
         "(BTC) Bitcoin" -> {
             val chipsBtc: List<CryptoChips> = listOf(
-                CryptoChips(
-                    "btc1", "btc2", "btc3", "btc4", "btc5"
-                )
+                CryptoChips("btc1", "btc2", "btc3", "btc4", "btc5")
             )
             chips = chipsBtc
         }
