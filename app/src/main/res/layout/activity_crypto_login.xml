@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,48 +7,51 @@
     tools:context=".CryptoLoginActivity"
     android:background="@color/background_color"
     >
-    <com.matheus.mota.cryptoapp.utils.customView.AccessEditText
-        android:id="@+id/accessPasswordEditText"
-        android:layout_width="293dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:change_hint="@string/password"
-        app:is_password="true"
-        app:layout_constraintBottom_toTopOf="@+id/loginAccessButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/accessLoginEditText"
-        app:inputType="textPassword"
-        />
-    <com.matheus.mota.cryptoapp.utils.customView.AccessEditText
-        android:id="@+id/accessLoginEditText"
-        android:layout_width="293dp"
-        android:layout_height="44dp"
-        app:change_hint="@string/login"
-        app:is_password="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/onboardingTextView"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@id/accessPasswordEditText"
-        app:inputType="text"
-        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <com.matheus.mota.cryptoapp.utils.customView.AccessEditText
+            android:id="@+id/accessPasswordEditText"
+            android:layout_width="293dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:change_hint="@string/password"
+            app:is_password="true"
+            app:layout_constraintBottom_toTopOf="@+id/loginAccessButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accessLoginEditText"
+            app:inputType="textPassword"
+            />
+        <com.matheus.mota.cryptoapp.utils.customView.AccessEditText
+            android:id="@+id/accessLoginEditText"
+            android:layout_width="293dp"
+            android:layout_height="44dp"
+            app:change_hint="@string/login"
+            app:is_password="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onboardingTextView"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toTopOf="@id/accessPasswordEditText"
+            app:inputType="text"
+            />
 
-    <com.matheus.mota.cryptoapp.utils.customView.AccessButton
-        android:id="@+id/loginAccessButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:layout_marginBottom="16dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:button_text="@string/access"
-        app:layout_constraintBottom_toTopOf="@+id/signUpButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/accessPasswordEditText" />
+        <com.matheus.mota.cryptoapp.utils.customView.AccessButton
+            android:id="@+id/loginAccessButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:button_text="@string/access"
+            app:layout_constraintBottom_toTopOf="@+id/signUpButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/accessPasswordEditText" />
 
-    <androidx.cardview.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/cardImageView"
             android:layout_width="match_parent"
             android:layout_height="300dp"
@@ -66,7 +69,7 @@
                 />
         </androidx.cardview.widget.CardView>
 
-    <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/welcomeTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -80,9 +83,9 @@
             app:layout_constraintTop_toBottomOf="@+id/cardImageView"
             app:layout_constraintBottom_toTopOf="@id/onboardingTextView"
             app:layout_constraintVertical_chainStyle="packed"
-            app:layout_constraintVertical_bias="0.25"
+            app:layout_constraintVertical_bias="0.35"
             />
-    <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/onboardingTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -97,21 +100,23 @@
             app:layout_constraintTop_toBottomOf="@+id/welcomeTextView"
             app:layout_constraintBottom_toTopOf="@id/accessLoginEditText"
             />
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/signUpButton"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:fontFamily="@font/roboto"
-        android:text="@string/sign_up_now"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginAccessButton" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signUpButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/roboto"
+            android:text="@string/sign_up_now"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginAccessButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>

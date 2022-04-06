@@ -5,7 +5,6 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.matheus.mota.cryptoapp.R
-import com.matheus.mota.cryptoapp.cryptoHome.CryptoCoinsAdapter.CryptoCoin
 import com.matheus.mota.cryptoapp.databinding.AccessCryptoCoinsBinding
 
 

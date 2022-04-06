@@ -21,7 +21,7 @@ class CryptoChipsAdapter(private val context: Context, private val cryptoChips: 
         holder.chipsList.setSecondCryptoChip(chips.secondCryptoChips)
         holder.chipsList.setThirdCryptoChip(chips.thirdCryptoChips)
         holder.chipsList.setFourthCryptoChip(chips.fourthCryptoChips)
-        holder.chipsList.setFifthCryptoChip(chips.fifthCryptoChips)
+        chips.fifthCryptoChips?.let { holder.chipsList.setFifthCryptoChip(it) }
     }
     override fun getItemCount(): Int = cryptoChips.size
 

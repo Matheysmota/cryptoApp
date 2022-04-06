@@ -1,97 +1,91 @@
 package com.matheus.mota.cryptoapp.utils
 
-import android.widget.TextView
-import com.matheus.mota.cryptoapp.R
-import com.matheus.mota.cryptoapp.cryptoHome.CryptoCoinsAdapter.CryptoCoin
+import com.matheus.mota.cryptoapp.cryptoHome.cryptoCoinsAdapter.CryptoCoin
+
 import com.matheus.mota.cryptoapp.cryptoInfo.CryptoChipsAdapter.CryptoChips
 import com.matheus.mota.cryptoapp.cryptoInfo.CryptoTeamsAdapter.CryptoTeams
 
 //adicionar chips e tags
-val cryptoCoinsCollection: List<CryptoCoin> = (
+val cryptoCoinsCollection = (
         listOf(
-            CryptoCoin("(BTC) Bitcoin", "#1", false),
-            CryptoCoin("(ETH) Etherium", "#2", false),
-            CryptoCoin("(SOL) Solana", "#3", false),
-            CryptoCoin("(BND) Binance Coin", "#4", false),
-            CryptoCoin("(XRP) XRP", "#5", false),
-            CryptoCoin("(LUNA) Terra", "#6", false),
-            CryptoCoin("(AVAX) Avalanche", "#7", false),
-            CryptoCoin("cryptoCoin8", "#8", false),
-            CryptoCoin("cryptoCoin9", "#9", false),
-            CryptoCoin("cryptoCoin10", "#10", false),
-            CryptoCoin("cryptoCoin11", "#11", false),
-            CryptoCoin("cryptoCoin12", "#12", false),
-            CryptoCoin("cryptoCoin13", "#13", false)
+            CryptoCoin(
+                "(BTC) Bitcoin",
+                "#1",
+                false,
+                "Descricao sobre o bitcoin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ligula ac eros malesuada scelerisque. Vivamus tellus ligula, dignissim sit amet enim sed, mattis efficitur tellus. Etiam est libero, mollis vitae purus ac, accumsan congue orci. Cras non justo quis ipsum tempor pulvinar vel ut eros. In fermentum sem magna, sit amet pulvinar lectus rhoncus ut. Cras nec diam scelerisque odio euismod vestibulum. Phasellus feugiat justo vel molestie dapibus. Donec sit amet sem consequat libero porttitor tincidunt. Etiam volutpat consequat convallis. Nulla arcu dui, fermentum ac elementum quis, vestibulum vitae lectus. Vestibulum efficitur vehicula mi, eu vulputate dolor sollicitudin non. Vestibulum ullamcorper pharetra pulvinar. Nulla ultrices, dui sed interdum lacinia, ante nibh porta justo, quis mollis erat odio in mauris.",
+                listOf(CryptoTeams("Satoshi Nakamoto", "founder", null)),
+                CryptoChips("segurança", "escasso", "Blockchain", "res. valor", "volátil")),
+            CryptoCoin("(ETH) Etherium",
+                "#2",
+                false,
+                "Descricao sobre o Etherium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ligula ac eros malesuada scelerisque. Vivamus tellus ligula, dignissim sit amet enim sed, mattis efficitur tellus. Etiam est libero, mollis vitae purus ac, accumsan congue orci. Cras non justo quis ipsum tempor pulvinar vel ut eros. In fermentum sem magna, sit amet pulvinar lectus rhoncus ut. Cras nec diam scelerisque odio euismod vestibulum. Phasellus feugiat justo vel molestie dapibus. Donec sit amet sem consequat libero porttitor tincidunt. Etiam volutpat consequat convallis. Nulla arcu dui, fermentum ac elementum quis, vestibulum vitae lectus. Vestibulum efficitur vehicula mi, eu vulputate dolor sollicitudin non. Vestibulum ullamcorper pharetra pulvinar. Nulla ultrices, dui sed interdum lacinia, ante nibh porta justo, quis mollis erat odio in mauris.",
+                listOf(CryptoTeams("Vitalik Buterin", "founder", null), CryptoTeams("Etherium Foundation", "Organization", null)),
+                CryptoChips("Btc 1", "Btc 2", "Btc 3", "Btc 4", "Btc 5")),
+            CryptoCoin("(SOL) Solana",
+                "#3",
+                false,
+                "Descricao sobre a Solana. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ligula ac eros malesuada scelerisque. Vivamus tellus ligula, dignissim sit amet enim sed, mattis efficitur tellus. Etiam est libero, mollis vitae purus ac, accumsan congue orci. Cras non justo quis ipsum tempor pulvinar vel ut eros. In fermentum sem magna, sit amet pulvinar lectus rhoncus ut. Cras nec diam scelerisque odio euismod vestibulum. Phasellus feugiat justo vel molestie dapibus. Donec sit amet sem consequat libero porttitor tincidunt. Etiam volutpat consequat convallis. Nulla arcu dui, fermentum ac elementum quis, vestibulum vitae lectus. Vestibulum efficitur vehicula mi, eu vulputate dolor sollicitudin non. Vestibulum ullamcorper pharetra pulvinar. Nulla ultrices, dui sed interdum lacinia, ante nibh porta justo, quis mollis erat odio in mauris.",
+                listOf(CryptoTeams("Vitalik Buterin", "founder", null), CryptoTeams("Etherium Foundation", "Organization", null)),
+                CryptoChips("Btc 1", "Btc 2", "Btc 3", "Btc 4", "Btc 5")),
+            CryptoCoin("(BND) BinanceCoin",
+                "#4",
+                false,
+                "Descricao sobre o Binance. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ligula ac eros malesuada scelerisque. Vivamus tellus ligula, dignissim sit amet enim sed, mattis efficitur tellus. Etiam est libero, mollis vitae purus ac, accumsan congue orci. Cras non justo quis ipsum tempor pulvinar vel ut eros. In fermentum sem magna, sit amet pulvinar lectus rhoncus ut. Cras nec diam scelerisque odio euismod vestibulum. Phasellus feugiat justo vel molestie dapibus. Donec sit amet sem consequat libero porttitor tincidunt. Etiam volutpat consequat convallis. Nulla arcu dui, fermentum ac elementum quis, vestibulum vitae lectus. Vestibulum efficitur vehicula mi, eu vulputate dolor sollicitudin non. Vestibulum ullamcorper pharetra pulvinar. Nulla ultrices, dui sed interdum lacinia, ante nibh porta justo, quis mollis erat odio in mauris.",
+                listOf(CryptoTeams("Vitalik Buterin", "founder", null), CryptoTeams("Etherium Foundation", "Organization", null)),
+                CryptoChips("Btc 1", "Btc 2", "Btc 3", "Btc 4", "Btc 5")),
+            CryptoCoin("(XRP) XRP",
+                "#5",
+                false,
+                "Descricao sobre o XRP. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ligula ac eros malesuada scelerisque. Vivamus tellus ligula, dignissim sit amet enim sed, mattis efficitur tellus. Etiam est libero, mollis vitae purus ac, accumsan congue orci. Cras non justo quis ipsum tempor pulvinar vel ut eros. In fermentum sem magna, sit amet pulvinar lectus rhoncus ut. Cras nec diam scelerisque odio euismod vestibulum. Phasellus feugiat justo vel molestie dapibus. Donec sit amet sem consequat libero porttitor tincidunt. Etiam volutpat consequat convallis. Nulla arcu dui, fermentum ac elementum quis, vestibulum vitae lectus. Vestibulum efficitur vehicula mi, eu vulputate dolor sollicitudin non. Vestibulum ullamcorper pharetra pulvinar. Nulla ultrices, dui sed interdum lacinia, ante nibh porta justo, quis mollis erat odio in mauris.",
+                listOf(CryptoTeams("Vitalik Buterin", "founder", null), CryptoTeams("Etherium Foundation", "Organization", null)),
+                CryptoChips("Btc 1", "Btc 2", "Btc 3", "Btc 4", "Btc 5")),
+            CryptoCoin("(LUNA) Terra",
+                "#6",
+                false,
+                "Descricao sobre a LUNA. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ligula ac eros malesuada scelerisque. Vivamus tellus ligula, dignissim sit amet enim sed, mattis efficitur tellus. Etiam est libero, mollis vitae purus ac, accumsan congue orci. Cras non justo quis ipsum tempor pulvinar vel ut eros. In fermentum sem magna, sit amet pulvinar lectus rhoncus ut. Cras nec diam scelerisque odio euismod vestibulum. Phasellus feugiat justo vel molestie dapibus. Donec sit amet sem consequat libero porttitor tincidunt. Etiam volutpat consequat convallis. Nulla arcu dui, fermentum ac elementum quis, vestibulum vitae lectus. Vestibulum efficitur vehicula mi, eu vulputate dolor sollicitudin non. Vestibulum ullamcorper pharetra pulvinar. Nulla ultrices, dui sed interdum lacinia, ante nibh porta justo, quis mollis erat odio in mauris.",
+                listOf(CryptoTeams("Vitalik Buterin", "founder", null), CryptoTeams("Etherium Foundation", "Organization", null)),
+                CryptoChips("Btc 1", "Btc 2", "Btc 3", "Btc 4", "Btc 5")),
+            CryptoCoin("(AVAX) Avalanche",
+                "#7",
+                false,
+                "Descricao sobre a Avalanche. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ligula ac eros malesuada scelerisque. Vivamus tellus ligula, dignissim sit amet enim sed, mattis efficitur tellus. Etiam est libero, mollis vitae purus ac, accumsan congue orci. Cras non justo quis ipsum tempor pulvinar vel ut eros. In fermentum sem magna, sit amet pulvinar lectus rhoncus ut. Cras nec diam scelerisque odio euismod vestibulum. Phasellus feugiat justo vel molestie dapibus. Donec sit amet sem consequat libero porttitor tincidunt. Etiam volutpat consequat convallis. Nulla arcu dui, fermentum ac elementum quis, vestibulum vitae lectus. Vestibulum efficitur vehicula mi, eu vulputate dolor sollicitudin non. Vestibulum ullamcorper pharetra pulvinar. Nulla ultrices, dui sed interdum lacinia, ante nibh porta justo, quis mollis erat odio in mauris.",
+                listOf(CryptoTeams("Vitalik Buterin", "founder", null), CryptoTeams("Etherium Foundation", "Organization", null)),
+                CryptoChips("Btc 1", "Btc 2", "Btc 3", "Btc 4", "Btc 5")),
+            CryptoCoin("(ADA) Cardano",
+                "#8",
+                false,
+                "Descricao sobre o Cardana. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ligula ac eros malesuada scelerisque. Vivamus tellus ligula, dignissim sit amet enim sed, mattis efficitur tellus. Etiam est libero, mollis vitae purus ac, accumsan congue orci. Cras non justo quis ipsum tempor pulvinar vel ut eros. In fermentum sem magna, sit amet pulvinar lectus rhoncus ut. Cras nec diam scelerisque odio euismod vestibulum. Phasellus feugiat justo vel molestie dapibus. Donec sit amet sem consequat libero porttitor tincidunt. Etiam volutpat consequat convallis. Nulla arcu dui, fermentum ac elementum quis, vestibulum vitae lectus. Vestibulum efficitur vehicula mi, eu vulputate dolor sollicitudin non. Vestibulum ullamcorper pharetra pulvinar. Nulla ultrices, dui sed interdum lacinia, ante nibh porta justo, quis mollis erat odio in mauris.",
+                listOf(CryptoTeams("Vitalik Buterin", "founder", null), CryptoTeams("Etherium Foundation", "Organization", null)),
+                CryptoChips("Btc 1", "Btc 2", "Btc 3", "Btc 4", "Btc 5")),
+            CryptoCoin("(DAI) Dai",
+                "#9",
+                false,
+                "Descricao sobre o Dai. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ligula ac eros malesuada scelerisque. Vivamus tellus ligula, dignissim sit amet enim sed, mattis efficitur tellus. Etiam est libero, mollis vitae purus ac, accumsan congue orci. Cras non justo quis ipsum tempor pulvinar vel ut eros. In fermentum sem magna, sit amet pulvinar lectus rhoncus ut. Cras nec diam scelerisque odio euismod vestibulum. Phasellus feugiat justo vel molestie dapibus. Donec sit amet sem consequat libero porttitor tincidunt. Etiam volutpat consequat convallis. Nulla arcu dui, fermentum ac elementum quis, vestibulum vitae lectus. Vestibulum efficitur vehicula mi, eu vulputate dolor sollicitudin non. Vestibulum ullamcorper pharetra pulvinar. Nulla ultrices, dui sed interdum lacinia, ante nibh porta justo, quis mollis erat odio in mauris.",
+                listOf(CryptoTeams("Vitalik Buterin", "founder", null), CryptoTeams("Etherium Foundation", "Organization", null)),
+                CryptoChips("Btc 1", "Btc 2", "Btc 3", "Btc 4", "Btc 5")),
+            CryptoCoin("(ATOM) Cosmos",
+                "#10",
+                false,
+                "Descricao sobre o Cosmos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ligula ac eros malesuada scelerisque. Vivamus tellus ligula, dignissim sit amet enim sed, mattis efficitur tellus. Etiam est libero, mollis vitae purus ac, accumsan congue orci. Cras non justo quis ipsum tempor pulvinar vel ut eros. In fermentum sem magna, sit amet pulvinar lectus rhoncus ut. Cras nec diam scelerisque odio euismod vestibulum. Phasellus feugiat justo vel molestie dapibus. Donec sit amet sem consequat libero porttitor tincidunt. Etiam volutpat consequat convallis. Nulla arcu dui, fermentum ac elementum quis, vestibulum vitae lectus. Vestibulum efficitur vehicula mi, eu vulputate dolor sollicitudin non. Vestibulum ullamcorper pharetra pulvinar. Nulla ultrices, dui sed interdum lacinia, ante nibh porta justo, quis mollis erat odio in mauris.",
+                listOf(CryptoTeams("Vitalik Buterin", "founder", null), CryptoTeams("Etherium Foundation", "Organization", null)),
+                CryptoChips("Btc 1", "Btc 2", "Btc 3", "Btc 4", "Btc 5")),
+            CryptoCoin("(DOGE) DogeCoin",
+                "#11",
+                false,
+                "Descricao sobre o DogeCoin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ligula ac eros malesuada scelerisque. Vivamus tellus ligula, dignissim sit amet enim sed, mattis efficitur tellus. Etiam est libero, mollis vitae purus ac, accumsan congue orci. Cras non justo quis ipsum tempor pulvinar vel ut eros. In fermentum sem magna, sit amet pulvinar lectus rhoncus ut. Cras nec diam scelerisque odio euismod vestibulum. Phasellus feugiat justo vel molestie dapibus. Donec sit amet sem consequat libero porttitor tincidunt. Etiam volutpat consequat convallis. Nulla arcu dui, fermentum ac elementum quis, vestibulum vitae lectus. Vestibulum efficitur vehicula mi, eu vulputate dolor sollicitudin non. Vestibulum ullamcorper pharetra pulvinar. Nulla ultrices, dui sed interdum lacinia, ante nibh porta justo, quis mollis erat odio in mauris.",
+                listOf(CryptoTeams("Vitalik Buterin", "founder", null), CryptoTeams("Etherium Foundation", "Organization", null)),
+                CryptoChips("Btc 1", "Btc 2", "Btc 3", "Btc 4", "Btc 5")),
+            CryptoCoin("(TRX) TROM",
+                "#12",
+                false,
+                "Descricao sobre o Trom. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ligula ac eros malesuada scelerisque. Vivamus tellus ligula, dignissim sit amet enim sed, mattis efficitur tellus. Etiam est libero, mollis vitae purus ac, accumsan congue orci. Cras non justo quis ipsum tempor pulvinar vel ut eros. In fermentum sem magna, sit amet pulvinar lectus rhoncus ut. Cras nec diam scelerisque odio euismod vestibulum. Phasellus feugiat justo vel molestie dapibus. Donec sit amet sem consequat libero porttitor tincidunt. Etiam volutpat consequat convallis. Nulla arcu dui, fermentum ac elementum quis, vestibulum vitae lectus. Vestibulum efficitur vehicula mi, eu vulputate dolor sollicitudin non. Vestibulum ullamcorper pharetra pulvinar. Nulla ultrices, dui sed interdum lacinia, ante nibh porta justo, quis mollis erat odio in mauris.",
+                listOf(CryptoTeams("Vitalik Buterin", "founder", null), CryptoTeams("Etherium Foundation", "Organization", null)),
+                CryptoChips("Btc 1", "Btc 2", "Btc 3", "Btc 4", "Btc 5")),
+            CryptoCoin("(XLM) Stellar",
+                "#13",
+                false,
+                "Descricao sobre a Stellar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ligula ac eros malesuada scelerisque. Vivamus tellus ligula, dignissim sit amet enim sed, mattis efficitur tellus. Etiam est libero, mollis vitae purus ac, accumsan congue orci. Cras non justo quis ipsum tempor pulvinar vel ut eros. In fermentum sem magna, sit amet pulvinar lectus rhoncus ut. Cras nec diam scelerisque odio euismod vestibulum. Phasellus feugiat justo vel molestie dapibus. Donec sit amet sem consequat libero porttitor tincidunt. Etiam volutpat consequat convallis. Nulla arcu dui, fermentum ac elementum quis, vestibulum vitae lectus. Vestibulum efficitur vehicula mi, eu vulputate dolor sollicitudin non. Vestibulum ullamcorper pharetra pulvinar. Nulla ultrices, dui sed interdum lacinia, ante nibh porta justo, quis mollis erat odio in mauris.",
+                listOf(CryptoTeams("Vitalik Buterin", "founder", null), CryptoTeams("Etherium Foundation", "Organization", null)),
+                CryptoChips("Btc 1", "Btc 2", "Btc 3", "Btc 4", "Btc 5"))
         )
         )
-
-var cryptoChipsCollection: List<CryptoChips> = (
-        arrayListOf(
-            CryptoChips("btc1", "btc2", "btc3", "btc4", "btc5"),
-            CryptoChips("ETH1", "ETH2", "ETH3","ETH4", "ETH5"),
-        )
-        )
-
-var cryptoTeamsCollection: Collection<CryptoTeams> = (
-        listOf(
-            CryptoTeams("Satoshi Nakamoto", "Founder", null),
-            CryptoTeams("Satoshi Nakamoto", "Founder", null),
-            CryptoTeams("Satoshi Nakamoto", "Founder", null),
-            CryptoTeams("Satoshi Nakamoto", "Founder", null),
-            CryptoTeams("Satoshi Nakamoto", "Founder", null),
-            CryptoTeams("Satoshi Nakamoto", "Founder", null)
-        )
-        )
-
-
-fun verification(coin: CryptoCoin, description: TextView){
-    for (cryptoCoin in cryptoCoinsCollection) {
-        if (coin == cryptoCoin) {
-            //comparete
-            changeTheDescription(coin, description)
-            //set my coin
-            break
-        }
-    }
-}
-
-fun changeTheDescription(coin: CryptoCoin, description: TextView) {
-    if (coin.cryptoName == "(BTC) Bitcoin") {
-        description.text = descriptionBTC
-    }
-}
-
-fun setTeam(coin: CryptoCoin): Collection<CryptoTeams> {
-    var teams = cryptoTeamsCollection
-    when (coin.cryptoName) {
-        "(BTC) Bitcoin" -> {
-            val teamBtc: List<CryptoTeams> = listOf(
-                CryptoTeams("Satoshi Nakamoto", "Founder", null)
-            )
-            teams = teamBtc
-        }
-    }
-    return teams
-}
-
-enum class myCoins {
-    BTC,
-    ETH,
-}
-
-val descriptionBTC = "descrição btc"
-
-
-fun setChips(coin: CryptoCoin): List<CryptoChips> {
-    var chips = cryptoChipsCollection
-
-    when (coin.cryptoName) {
-        "(BTC) Bitcoin" -> {
-            val chipsBtc: List<CryptoChips> = listOf(
-                CryptoChips("btc1", "btc2", "btc3", "btc4", "btc5")
-            )
-            chips = chipsBtc
-        }
-    }
-    return chips
-}
