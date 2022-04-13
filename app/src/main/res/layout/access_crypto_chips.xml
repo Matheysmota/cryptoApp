@@ -9,69 +9,18 @@
         android:layout_width="0dp"
         android:layout_height="match_parent">
 
-        <com.google.android.material.chip.ChipGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:singleLine="true"
-            app:chipBackgroundColor="@color/button_color"
-            app:chipSpacing="12dp"
-            android:orientation="horizontal"
-            app:singleLine="true"
+        <com.google.android.material.chip.Chip
+            android:id="@+id/myChip"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="@color/chips_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            >
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/firstChip"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:textAlignment="center"
-                android:fontFamily="@font/roboto_medium"
-                android:textColor="@color/white"
-                app:chipBackgroundColor="@color/chips_color" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/secondChip"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:textAlignment="center"
-                android:fontFamily="@font/roboto_medium"
-                android:textColor="@color/white"
-                app:chipBackgroundColor="@color/chips_color" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/thirdChip"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:textAlignment="center"
-                android:fontFamily="@font/roboto_medium"
-                android:textColor="@color/white"
-                app:chipBackgroundColor="@color/chips_color" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/fourthChip"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:textAlignment="center"
-                android:fontFamily="@font/roboto_medium"
-                android:textColor="@color/white"
-                app:chipBackgroundColor="@color/chips_color" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/fifthChip"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:textAlignment="center"
-                android:fontFamily="@font/roboto_medium"
-                android:textColor="@color/white"
-                app:chipBackgroundColor="@color/chips_color" />
-
-
-        </com.google.android.material.chip.ChipGroup>
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 </HorizontalScrollView>

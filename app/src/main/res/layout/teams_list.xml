@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:background="@color/background_color">
 
-    <com.matheus.mota.cryptoapp.cryptoInfo.AccessCryptoTeams
+    <com.matheus.mota.cryptoapp.ui.cryptoInfo.AccessCryptoTeams
         android:id="@+id/listAccessCryptoTeams"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

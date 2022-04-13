@@ -1,4 +1,4 @@
-package com.matheus.mota.cryptoapp.cryptoInfo.CryptoChipsAdapter
+package com.matheus.mota.cryptoapp.ui.cryptoInfo.CryptoChipsAdapter
 
 import java.io.Serializable
 

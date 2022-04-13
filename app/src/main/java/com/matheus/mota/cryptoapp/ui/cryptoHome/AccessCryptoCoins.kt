@@ -1,4 +1,4 @@
-package com.matheus.mota.cryptoapp.cryptoHome
+package com.matheus.mota.cryptoapp.ui.cryptoHome
 
 import android.content.Context
 import android.util.AttributeSet

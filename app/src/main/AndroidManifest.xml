@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.matheus.mota.cryptoapp">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,16 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CryptoApp">
         <activity
-            android:name=".cryptoInfo.CryptoCoinInfoActivity"
+            android:name="com.matheus.mota.cryptoapp.ui.cryptoInfo.CryptoCoinInfoActivity"
             android:exported="false" />
         <activity
-            android:name=".CryptoSignUpActivity"
+            android:name=".ui.CryptoSignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".cryptoHome.CryptoHomeActivity"
+            android:name="com.matheus.mota.cryptoapp.ui.cryptoHome.CryptoHomeActivity"
             android:exported="false" />
         <activity
-            android:name=".CryptoLoginActivity"
+            android:name=".ui.CryptoLoginActivity"
             android:exported="true"
             android:theme="@style/Theme.LoginCryptoApp">
             <intent-filter>

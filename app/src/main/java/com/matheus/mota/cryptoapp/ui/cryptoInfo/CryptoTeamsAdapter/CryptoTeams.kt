@@ -1,4 +1,4 @@
-package com.matheus.mota.cryptoapp.cryptoInfo.CryptoTeamsAdapter
+package com.matheus.mota.cryptoapp.ui.cryptoInfo.CryptoTeamsAdapter
 
 import android.graphics.drawable.Drawable
 import java.io.Serializable

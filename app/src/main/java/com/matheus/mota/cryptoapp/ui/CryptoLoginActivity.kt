@@ -1,12 +1,10 @@
-package com.matheus.mota.cryptoapp
+package com.matheus.mota.cryptoapp.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.core.view.isNotEmpty
-import com.matheus.mota.cryptoapp.cryptoHome.CryptoHomeActivity
-import com.matheus.mota.cryptoapp.cryptoInfo.CryptoCoinInfoActivity
+import com.matheus.mota.cryptoapp.ui.cryptoHome.CryptoHomeActivity
 import com.matheus.mota.cryptoapp.databinding.ActivityCryptoLoginBinding
 
 class CryptoLoginActivity : AppCompatActivity() {
@@ -35,8 +33,9 @@ class CryptoLoginActivity : AppCompatActivity() {
             signUpButton.setOnClickListener {
                 val intent = Intent(this@CryptoLoginActivity, CryptoSignUpActivity::class.java)
                 startActivity(intent)
-
+                finish()
             }
         }
     }
+
 }

@@ -1,11 +1,11 @@
-package com.matheus.mota.cryptoapp
+package com.matheus.mota.cryptoapp.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.matheus.mota.cryptoapp.databinding.ActivityCryptoSignUpBinding
-import com.matheus.mota.cryptoapp.cryptoHome.CryptoHomeActivity
+import com.matheus.mota.cryptoapp.ui.cryptoHome.CryptoHomeActivity
 
 class CryptoSignUpActivity : AppCompatActivity() {
     lateinit var binding: ActivityCryptoSignUpBinding

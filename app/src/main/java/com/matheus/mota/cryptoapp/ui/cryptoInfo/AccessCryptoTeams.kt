@@ -1,12 +1,10 @@
-package com.matheus.mota.cryptoapp.cryptoInfo
+package com.matheus.mota.cryptoapp.ui.cryptoInfo
 
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.matheus.mota.cryptoapp.databinding.AccessCryptoChipsBinding
 import com.matheus.mota.cryptoapp.databinding.AccessCryptoTeamsBinding
 
 class AccessCryptoTeams @JvmOverloads constructor(

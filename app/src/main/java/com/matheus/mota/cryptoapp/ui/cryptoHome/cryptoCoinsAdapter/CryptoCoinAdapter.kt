@@ -1,13 +1,14 @@
-package com.matheus.mota.cryptoapp.cryptoHome.cryptoCoinsAdapter
+package com.matheus.mota.cryptoapp.ui.cryptoHome.cryptoCoinsAdapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.matheus.mota.cryptoapp.cryptoHome.AccessCryptoCoins
+import com.matheus.mota.cryptoapp.ui.cryptoHome.AccessCryptoCoins
 import com.matheus.mota.cryptoapp.R
-import com.matheus.mota.cryptoapp.cryptoHome.AccessCryptoCoinClicklListener
+import com.matheus.mota.cryptoapp.model.CryptoCoin
+import com.matheus.mota.cryptoapp.ui.cryptoHome.AccessCryptoCoinClicklListener
 
 
 open class CryptoCoinAdapter(private val context: Context, private val cryptoCoins: MutableList<CryptoCoin>): RecyclerView.Adapter<CryptoCoinAdapter.CryptoCoinViewHolder>() {
@@ -22,8 +23,8 @@ open class CryptoCoinAdapter(private val context: Context, private val cryptoCoi
 
     override fun onBindViewHolder(holder: CryptoCoinViewHolder, position: Int) {
         val coin = cryptoCoins[position]
-        holder.coinsList.setCoinsName(coin.cryptoName)
-        holder.coinsList.setRankingCoin(coin.ranking)
+        holder.coinsList.setCoinsName(coin.name)
+        holder.coinsList.setRankingCoin(coin.rank)
         if (coin.favorite){
             holder.coinsList.setIsFavorite()
         } else {
