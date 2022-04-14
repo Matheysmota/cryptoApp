@@ -8,5 +8,4 @@ interface CryptoHomeService {
 
     @GET("v1/coins")
     fun getCryptoCoin(): Call<List<CryptoCoin>>
-
 }

@@ -37,7 +37,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/myCoinTollBar"
             app:layout_constraintVertical_chainStyle="packed"
-            android:text="@string/btc_description" />
+            tools:text="@string/btc_description" />
 
         <HorizontalScrollView
             android:id="@+id/horizontalView"

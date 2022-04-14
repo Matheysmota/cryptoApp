@@ -2,6 +2,7 @@ package com.matheus.mota.cryptoapp.ui.cryptoInfo
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.matheus.mota.cryptoapp.model.CryptoCoin
 import com.matheus.mota.cryptoapp.model.coinInfo.CryptoCoinInfo
 import com.matheus.mota.cryptoapp.webClient.service.CryptoInfoService
@@ -11,6 +12,8 @@ import com.matheus.mota.cryptoapp.model.coinInfo.Team
 import com.matheus.mota.cryptoapp.ui.cryptoInfo.CryptoChipsAdapter.CryptoChipsAdapter
 import com.matheus.mota.cryptoapp.ui.cryptoInfo.CryptoTeamsAdapter.CryptoTeamsAdapter
 import com.matheus.mota.cryptoapp.webClient.CryptoInfoRetrofit
+import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Response
 
@@ -34,7 +37,12 @@ class CryptoCoinInfoActivity : AppCompatActivity() {
         val recyclerCryptoChips = binding.chipsRecyclerView
         val chipsList: MutableList<Tag> = mutableListOf()
         //create cryptoCoins
-        chipsList.addAll(coin.tags)
+        if (coin.tags == null) {
+            chipsList.addAll(listOf(Tag(0,0, "","")))
+        } else{
+            chipsList.addAll(coin.tags)
+        }
+
 
         val cryptoAdapter = CryptoChipsAdapter(this, chipsList)
         recyclerCryptoChips.adapter = cryptoAdapter
@@ -44,58 +52,32 @@ class CryptoCoinInfoActivity : AppCompatActivity() {
         val teamsList: MutableList<Team> = mutableListOf()
 
         //create cryptoCoins
-        teamsList.addAll(coin.team)
+        if (coin.team == null) {
+            teamsList.addAll(listOf(Team("", "", "", null)))
+        } else{
+            teamsList.addAll(coin.team)
+        }
+
 
         val cryptoAdapter = CryptoTeamsAdapter(this, teamsList)
         recyclerCryptoTeams.adapter = cryptoAdapter
     }
 
-    fun getCryptoInfo(){
+    private fun getCryptoInfo(){
+        lifecycleScope.launch {
+            val retrofitService = CryptoInfoRetrofit.getCryptoInfoRetrofit("https://api.coinpaprika.com/")
+            val cryptoInfoService = retrofitService.create(CryptoInfoService::class.java)
+            val myCoin = cryptoInfoService.getCryptoCoinInfo(coin.id).body()
 
-        val retrofitService = CryptoInfoRetrofit.getCryptoInfoRetrofit("https://api.coinpaprika.com/")
-        val cryptoInfoService = retrofitService.create(CryptoInfoService::class.java)
-
-        cryptoInfoService.getCryptoCoinInfo(coin.id).enqueue(object : retrofit2.Callback<CryptoCoinInfo>{
-            override fun onResponse(
-                call: Call<CryptoCoinInfo>,
-                response: Response<CryptoCoinInfo>
-            ) {
-                if (response.isSuccessful){
-                    myCryptoCoinInfo = response.body()!!
-                    binding.run {
-                        descriptionTextView.text = myCryptoCoinInfo.description
-                        setCryptoChipsAdapter(myCryptoCoinInfo)
-                        setCryptoTeamsAdapter(myCryptoCoinInfo)
-                    }
-                }
-            }
-            override fun onFailure(call: Call<CryptoCoinInfo>, t: Throwable) {
-                TODO("Not yet implemented")
-            }
-        })
-//        Thread(Runnable {
-//            callback.invoke(
-//
-//            )
-//
-//        })
+            setCryptoInfo(myCoin)
+        }
     }
-
+    private fun setCryptoInfo(myCoin: CryptoCoinInfo?) {
+        if(myCoin != null){
+            setCryptoChipsAdapter(myCoin)
+            setCryptoTeamsAdapter(myCoin)
+            binding.descriptionTextView.text = myCoin.description
+            binding.myCoinTollBar.title = "("+myCoin.symbol+")"+myCoin.name
+        }
+    }
 }
-//private fun initMyCoinInfo(coin: CryptoCoin){
-//    setCryptoChipsAdapter(coin)
-//    setCryptoTeamsAdapter(coin)
-//    binding.descriptionTextView.text = coin.description
-//    initOptionMenu(coin)
-//}
-//private fun initOptionMenu(coin: CryptoCoin) {
-//    with(binding.myCoinTollBar) {
-//        inflateMenu(com.matheus.mota.cryptoapp.R.menu.coin_info_menu)
-//        title = coin.name
-//        menu.findItem(com.matheus.mota.cryptoapp.R.id.action_return).setOnMenuItemClickListener {
-//            finish()
-//            true
-//        }
-//    }
-//
-//}
