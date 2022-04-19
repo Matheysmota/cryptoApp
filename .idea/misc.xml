@@ -22,14 +22,14 @@
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/drawable/menubar.xml" value="0.21" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/access_button.xml" value="0.22" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/access_crypto_chips.xml" value="0.25" />
-        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/access_crypto_coins.xml" value="0.33" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/access_crypto_coins.xml" value="0.5" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/access_crypto_teams.xml" value="0.33" />
-        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/access_edit_text.xml" value="0.5" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/access_edit_text.xml" value="0.18" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_crypto.xml" value="0.33" />
-        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_crypto_coin_info.xml" value="0.33" />
-        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_crypto_home.xml" value="0.33" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_crypto_coin_info.xml" value="0.37962962962962965" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_crypto_home.xml" value="0.2" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_crypto_login.xml" value="0.25" />
-        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_crypto_sign_up.xml" value="0.2" />
+        <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_crypto_sign_up.xml" value="0.33" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
         <entry key="..\:/Users/Matheus/AndroidStudioProjects/CryptoApp/app/src/main/res/layout/alert_dialog.xml" value="0.33" />

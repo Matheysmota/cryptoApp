@@ -15,8 +15,8 @@ class AccessCryptoChips @JvmOverloads constructor(
         .inflate(LayoutInflater.from(context), this, true)
 
     // Has the responsibility of programmatically set the State
-    fun setMyChip(firstCryptoChip: String){
-        binding.myChip.text = firstCryptoChip
+    fun setMyChip(tag: String){
+        binding.myChip.text = tag
     }
 }
 

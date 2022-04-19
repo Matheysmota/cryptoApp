@@ -17,14 +17,18 @@
             android:exported="false" />
         <activity
             android:name=".ui.CryptoSignUpActivity"
+            android:windowSoftInputMode="adjustPan"
             android:exported="false" />
         <activity
             android:name="com.matheus.mota.cryptoapp.ui.cryptoHome.CryptoHomeActivity"
+
             android:exported="false" />
         <activity
             android:name=".ui.CryptoLoginActivity"
+            android:windowSoftInputMode="adjustPan"
             android:exported="true"
-            android:theme="@style/Theme.LoginCryptoApp">
+            android:theme="@style/Theme.LoginCryptoApp"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -7,71 +7,166 @@
     tools:context=".ui.CryptoSignUpActivity"
     android:background="@color/background_color">
 
-    <com.matheus.mota.cryptoapp.utils.customView.AccessButton
-        android:id="@+id/createAccountAccessButton"
-        android:layout_width="293dp"
-        android:layout_height="44dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:button_text="@string/sign_up"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/confirmPwdSignInEditText"
-        android:layout_marginTop="40dp"
-        />
-
-    <com.matheus.mota.cryptoapp.utils.customView.AccessEditText
-        android:id="@+id/loginSignInEditText"
-        android:layout_width="293dp"
-        android:layout_height="44dp"
-        app:change_hint="@string/login"
-        app:inputType="text"
-        app:is_password="false"
-        app:layout_constraintBottom_toTopOf="@id/cpfSignInEditText"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/myCardTollBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.30"
-        app:layout_constraintVertical_chainStyle="packed" />
+        android:backgroundTint="@color/app_bar"
+        >
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/myCreateAccountTollBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextColor="@color/white"
+            android:layout_marginStart="46dp"
+            app:title="Nova conta"/>
+        <ImageView
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/signUpNavigateIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/my_navigate_icon" />
+    </androidx.cardview.widget.CardView>
 
-    <com.matheus.mota.cryptoapp.utils.customView.AccessEditText
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/loginSignInEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginTop="114dp"
+        app:boxBackgroundMode="none"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginStart="16dp"
+        tools:background="@color/background_color"
+        tools:context=".ui.CryptoLoginActivity">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:autofillHints=""
+            android:background="@drawable/access_edit_text"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="@string/login"
+            android:padding="0dp"
+            android:textColorHint="@color/hint_color" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cpfSignInEditText"
-        android:layout_width="293dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="20dp"
-        app:change_hint="@string/cpf"
-        app:inputType="number"
-        app:is_password="false"
-        app:layout_constraintBottom_toTopOf="@id/passwordSignInEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="33dp"
+        app:boxBackgroundMode="none"
+        app:hintAnimationEnabled="false"
+        android:layout_marginTop="33dp"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginSignInEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/loginSignInEditText"
+        tools:background="@color/background_color"
+        tools:context=".ui.CryptoLoginActivity">
 
-    <com.matheus.mota.cryptoapp.utils.customView.AccessEditText
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:autofillHints=""
+            android:background="@drawable/access_edit_text"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="@string/cpf"
+            android:padding="0dp"
+            android:textColorHint="@color/hint_color" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordSignInEditText"
-        android:layout_width="293dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="40dp"
-        app:change_hint="@string/password"
-        app:inputType="textPassword"
-        app:is_password="true"
-        app:layout_constraintBottom_toTopOf="@+id/confirmPwdSignInEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginTop="43dp"
+        app:boxBackgroundMode="none"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cpfSignInEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/cpfSignInEditText"
+        tools:background="@color/background_color"
+        tools:context=".ui.CryptoLoginActivity">
 
-    <com.matheus.mota.cryptoapp.utils.customView.AccessEditText
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:autofillHints=""
+            android:inputType="textPassword"
+            android:background="@drawable/access_edit_text"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="@string/password"
+            android:padding="0dp"
+            android:textColorHint="@color/hint_color" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/confirmPwdSignInEditText"
-        android:layout_width="293dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
-        app:change_hint="@string/confirm_password"
-        app:inputType="textPassword"
-        app:is_password="true"
-        app:layout_constraintBottom_toTopOf="@+id/createAccountAccessButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginTop="16dp"
+        app:boxBackgroundMode="none"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordSignInEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordSignInEditText"
+        tools:background="@color/background_color"
+        tools:context=".ui.CryptoLoginActivity">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:autofillHints=""
+            android:inputType="textPassword"
+            android:background="@drawable/access_edit_text"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="@string/confirm_password"
+            android:padding="0dp"
+            android:textColorHint="@color/hint_color" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/createAccountAccessButton"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/access_button"
+        android:layout_marginTop="16dp"
+        android:text="@string/sign_up"
+        android:textAllCaps="false"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="34dp"
+        android:padding="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPwdSignInEditText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
