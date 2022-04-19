@@ -26,19 +26,37 @@ class CryptoSignUpActivity : AppCompatActivity() {
                     setToast()
                 }
             }
+            signUpNavigateIcon.setOnClickListener {
+                val intent = Intent(this@CryptoSignUpActivity, CryptoLoginActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
 
         }
     }
+
     private fun setToast() {
-        Toast.makeText(this@CryptoSignUpActivity,
+        Toast.makeText(
+            this@CryptoSignUpActivity,
             "Digite todos os campos.",
-            Toast.LENGTH_SHORT)
+            Toast.LENGTH_SHORT
+        )
             .show()
     }
+
     private fun setHomeScreen(): Intent {
-        return Intent(this@CryptoSignUpActivity,
-            CryptoHomeActivity::class.java)
+        return Intent(
+            this@CryptoSignUpActivity,
+            CryptoHomeActivity::class.java
+        )
     }
-    private fun ActivityCryptoSignUpBinding.signUpValidation() =
-        loginSignInEditText.isValid() && cpfSignInEditText.isValid() && passwordSignInEditText.isValid() && confirmPwdSignInEditText.isValid()
+    private fun ActivityCryptoSignUpBinding.signUpValidation(): Boolean {
+       val myBoolean = loginSignInEditText.editText?.text?.isNotEmpty() == true
+               && cpfSignInEditText.editText?.text?.isNotEmpty() == true
+               && passwordSignInEditText.editText?.text?.isNotEmpty() == true
+               && confirmPwdSignInEditText.editText?.text?.isNotEmpty() == true
+
+       return myBoolean
+    }
+
 }

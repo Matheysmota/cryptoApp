@@ -1,6 +1,7 @@
 package com.matheus.mota.cryptoapp.ui.cryptoInfo
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.matheus.mota.cryptoapp.model.CryptoCoin
@@ -27,6 +28,7 @@ class CryptoCoinInfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCryptoCoinInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.myCoinTollBar)
 
         val data = intent.extras
         coin = data?.getSerializable("coin") as CryptoCoin
@@ -38,11 +40,10 @@ class CryptoCoinInfoActivity : AppCompatActivity() {
         val chipsList: MutableList<Tag> = mutableListOf()
         //create cryptoCoins
         if (coin.tags == null) {
-            chipsList.addAll(listOf(Tag(0,0, "","")))
+            chipsList.addAll(listOf(Tag(0,0, "","Null")))
         } else{
             chipsList.addAll(coin.tags)
         }
-
 
         val cryptoAdapter = CryptoChipsAdapter(this, chipsList)
         recyclerCryptoChips.adapter = cryptoAdapter
@@ -53,7 +54,7 @@ class CryptoCoinInfoActivity : AppCompatActivity() {
 
         //create cryptoCoins
         if (coin.team == null) {
-            teamsList.addAll(listOf(Team("", "", "", null)))
+            teamsList.addAll(listOf(Team("", "Null", "No founder", null)))
         } else{
             teamsList.addAll(coin.team)
         }
@@ -62,7 +63,6 @@ class CryptoCoinInfoActivity : AppCompatActivity() {
         val cryptoAdapter = CryptoTeamsAdapter(this, teamsList)
         recyclerCryptoTeams.adapter = cryptoAdapter
     }
-
     private fun getCryptoInfo(){
         lifecycleScope.launch {
             val retrofitService = CryptoInfoRetrofit.getCryptoInfoRetrofit("https://api.coinpaprika.com/")
@@ -77,7 +77,15 @@ class CryptoCoinInfoActivity : AppCompatActivity() {
             setCryptoChipsAdapter(myCoin)
             setCryptoTeamsAdapter(myCoin)
             binding.descriptionTextView.text = myCoin.description
-            binding.myCoinTollBar.title = "("+myCoin.symbol+")"+myCoin.name
+            binding.myCoinTollBar.title = "("+myCoin.symbol+") "+myCoin.name
+
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == android.R.id.home) {
+            finish()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

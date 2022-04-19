@@ -26,7 +26,7 @@ val rank: Int,
 val started_at: String,
 val symbol: String,
 val tags: List<Tag>?,
-val team: List<Team>,
+val team: List<Team>?,
 val type: String,
 val whitepaper: Whitepaper
 )

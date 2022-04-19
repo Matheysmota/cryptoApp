@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.view.isNotEmpty
 import com.matheus.mota.cryptoapp.ui.cryptoHome.CryptoHomeActivity
 import com.matheus.mota.cryptoapp.databinding.ActivityCryptoLoginBinding
 
@@ -23,7 +24,7 @@ class CryptoLoginActivity : AppCompatActivity() {
         binding.run {
             loginAccessButton.setOnClickListener {
                 val intent = Intent(this@CryptoLoginActivity, CryptoHomeActivity::class.java)
-                if(accessLoginEditText.isValid() && accessPasswordEditText.isValid()){
+                if(accessLoginEditText.editText?.text?.isNotEmpty() == true && accessPasswordEditText.editText?.text?.isNotEmpty() == true ){
                     startActivity(intent)
                     finish()
                 } else {
@@ -33,7 +34,6 @@ class CryptoLoginActivity : AppCompatActivity() {
             signUpButton.setOnClickListener {
                 val intent = Intent(this@CryptoLoginActivity, CryptoSignUpActivity::class.java)
                 startActivity(intent)
-                finish()
             }
         }
     }
